@@ -11,23 +11,18 @@ public class Controlador {
 	public Controlador(FInformacion fInformacion) {
 		this.fInformacion =fInformacion;
 		this.Figura = new Figura(0, 0, 0);
-		this.Figura.addObserver(this.fInformacion.getfListaDoble().getpLienzo());
+		this.Figura.addObserver(this.fInformacion.getfFigura().getpLienzo());
 	
 	}
 
 
-
-
-
-	public void circulo(int R, int G, int B) {
-		// TODO Auto-generated method stub
-		
+	public void circulo (int R, int G, int B) throws Exception {
+		this.Figura.insertar(R, G, B);
 	}
 
 
-	public void cuadrado(int R, int G, int B) {
-		// TODO Auto-generated method stub
-		
+	public void cuadrado (int R, int G, int B) throws Exception {
+		this.Figura.insertar(R, G, B);
 	}
 
 	

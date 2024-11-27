@@ -39,6 +39,10 @@ public class Figura {
 		// TODO Auto-generated method stub
 		
 	}
+	public void insertar(int r2, int g2, int b2) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
