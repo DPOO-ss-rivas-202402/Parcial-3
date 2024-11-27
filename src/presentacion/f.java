@@ -16,7 +16,7 @@ public class f extends JFrame {
 	
 
 	public f() {
-		this.setTitle("Figuras");
+		this.setTitle("Parial 3 Saray Rivas");
 		this.setDefaultCloseOperation(EXIT_ON_CLOSE);
 		this.setSize(800, 600);
 		this.setLayout(new BorderLayout());

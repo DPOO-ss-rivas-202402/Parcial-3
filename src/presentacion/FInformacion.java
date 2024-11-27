@@ -19,20 +19,35 @@ public class FInformacion extends JPanel {
 	private JButton bCuadrado;
 	private JButton bCirculo;
 	private Controlador controlador;
-	private f fListaDoble;
+	private f fFigura;
 	
-	public f getfListaDoble() {
-		return fListaDoble;
+	public f getfFigura() {
+		return fFigura;
 	}
 
-	public FInformacion(f fListaDoble) {
-		this.fListaDoble = fListaDoble;
+	public FInformacion(f fFigura) {
+		this.fFigura = fFigura;
 		this.colorR = new JTextField();
 		this.colorG = new JTextField();
 		this.colorB = new JTextField();
 		this.bCuadrado = new JButton("Cuadrado");
+		this.bCuadrado.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cuadrado();
+				
+			}
+		});
 		this.bCirculo = new JButton("Circulo");
-		
+		this.bCirculo.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				circulo();
+				
+			}
+		});
 		
 		this.controlador = new Controlador(this);
 		this.setLayout(new GridLayout(4, 2, 10, 12));
@@ -47,7 +62,26 @@ public class FInformacion extends JPanel {
 		
 		
 	}
-
+	public void cuadrado() {
+		try {
+			this.controlador.cuadrado(Integer.parseInt(this.colorR.getText()),Integer.parseInt(this.colorG.getText()), Integer.parseInt(this.colorB.getText()));
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(this.fFigura, "El RGB debe de ser numerico", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this.fFigura, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+		}
+	}
+	
+	
+	public void circulo() {
+		try {
+			this.controlador.circulo(Integer.parseInt(this.colorR.getText()), Integer.parseInt(this.colorG.getText()), Integer.parseInt(this.colorB.getText()));
+		} catch (NumberFormatException e) {
+			JOptionPane.showMessageDialog(this.fFigura, "El RGB debe de ser numerico", "Error", JOptionPane.ERROR_MESSAGE);
+		} catch (Exception e) {
+			JOptionPane.showMessageDialog(this.fFigura, e.getMessage(), "Error", JOptionPane.ERROR_MESSAGE);
+		}
+	}
 	
 	
 	

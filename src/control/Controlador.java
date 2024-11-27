@@ -15,5 +15,20 @@ public class Controlador {
 	
 	}
 
+
+
+
+
+	public void circulo(int R, int G, int B) {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	public void cuadrado(int R, int G, int B) {
+		// TODO Auto-generated method stub
+		
+	}
+
 	
 }

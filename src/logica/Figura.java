@@ -35,6 +35,10 @@ public class Figura {
 		this.G = G;
 		this.B = B;
 	}
+	public void addObserver(FLienzo getpLienzo) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
